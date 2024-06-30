@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dịu tốt nghiệp hehe</title>
+    <style>
+      html,
+      body {
+        background-color: AliceBlue;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      style="
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      "
+    >
+      <canvas id="myCanvas" width="800" height="500"></canvas>
+      <h1
+        style="
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          text-align: center;
+          color: hotpink;
+        "
+      >
+        Mừng Dịu tốt nghiệp nha
+      </h1>
+      <h2
+        style="
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          text-align: center;
+        "
+      >
+        AL ngồi mãi mà k nghĩ ra chúc Dịu cái gì hehe nên là chúc Dịu những điều
+        tốt nhất , dạo này 2 đứa gặp hay cãi nhau AL cũng k dành thời gian nhiều
+        cho Dịu, AL xin lỗi Dịu nhìu nha, mong rằng thời gian tới 2 đứa sẽ thay
+        đổi để trở nên tốt hơn , bớt cãi nhau hơn và tạo nên những kỉ niệm mới
+        trong những ngày cuối ở Nga và khi về Việt Nam nha <br /><span
+          style="color: red"
+        >
+          i love you hehe
+        </span>
+      </h2>
+    </div>
+    <script>
+      const canvas = document.getElementById("myCanvas");
+      const ctx = canvas.getContext("2d");
+      function drawPetal(x, y, width, height, rotation, color) {
+        ctx.save();
+        ctx.beginPath();
+        ctx.translate(x, y);
+        ctx.rotate(rotation);
+        ctx.scale(1, height / width);
+        ctx.arc(0, 0, width / 2, 0, 2 * Math.PI);
+        ctx.restore();
+        ctx.fillStyle = color;
+        ctx.fill();
+        ctx.closePath();
+      }
+      function drawFlower(
+        centerX,
+        centerY,
+        petalWidth,
+        petalHeight,
+        petalCount,
+        petalColor,
+        centerColor
+      ) {
+        for (let i = 0; i < petalCount; i++) {
+          const angle = (i * 2 * Math.PI) / petalCount;
+          drawPetal(
+            centerX,
+            centerY,
+            petalWidth,
+            petalHeight,
+            angle,
+            petalColor
+          );
+        }
+        ctx.beginPath();
+        ctx.arc(centerX, centerY, petalWidth / 4, 0, 2 * Math.PI);
+        ctx.fillStyle = centerColor;
+        ctx.fill();
+        ctx.closePath();
+      }
+
+      drawFlower(100, 100, 50, 100, 8, "Lavender", "LemonChiffon");
+      drawFlower(100, 200, 50, 100, 8, "Lavender", "LemonChiffon");
+      drawFlower(100, 300, 50, 100, 8, "Lavender", "LemonChiffon");
+      drawFlower(180, 290, 30, 70, 8, "Lavender", "LemonChiffon");
+      drawFlower(230, 240, 30, 70, 8, "Lavender", "LemonChiffon");
+      drawFlower(230, 170, 30, 70, 8, "Lavender", "LemonChiffon");
+      drawFlower(180, 120, 30, 70, 8, "Lavender", "LemonChiffon");
+      drawFlower(330, 100, 30, 70, 8, "Lavender", "LemonChiffon");
+      drawFlower(330, 170, 30, 70, 8, "Lavender", "LemonChiffon");
+      drawFlower(330, 240, 30, 70, 8, "Lavender", "LemonChiffon");
+      drawFlower(330, 310, 30, 70, 8, "Lavender", "LemonChiffon");
+      drawFlower(330, 390, 30, 70, 8, "Lavender", "LemonChiffon");
+      drawFlower(420, 100, 30, 70, 8, "Lavender", "LemonChiffon");
+      drawFlower(420, 170, 30, 70, 8, "Lavender", "LemonChiffon");
+      drawFlower(420, 240, 30, 70, 8, "Lavender", "LemonChiffon");
+      drawFlower(420, 310, 30, 70, 8, "Lavender", "LemonChiffon");
+      drawFlower(580, 100, 30, 70, 8, "Lavender", "LemonChiffon");
+      drawFlower(580, 170, 30, 70, 8, "Lavender", "LemonChiffon");
+      drawFlower(580, 240, 30, 70, 8, "Lavender", "LemonChiffon");
+      drawFlower(580, 310, 30, 70, 8, "Lavender", "LemonChiffon");
+      drawFlower(500, 310, 30, 70, 8, "Lavender", "LemonChiffon");
+    </script>
+  </body>
+</html>
